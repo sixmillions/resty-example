@@ -1,0 +1,24 @@
+version: '3.1'
+services:
+  mysql:
+    # restart: always
+    image: mysql:5.7
+    container_name: mysql57
+    networks:  
+      - mysql_network
+      - resty_resty_network
+    ports: 
+      - "3357:3306"
+    environment: 
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: 11xxOOxx
+    # volumes:
+    #   - /opt/mysql/57/log:/var/log/mysql
+    #   - /opt/mysql/57/data:/var/lib/mysql
+    #   - /opt/mysql/57/conf.d:/etc/mysql/conf.d
+    privileged: true
+
+networks:  
+  mysql_network:
+  resty_resty_network: # 默认网络名字
+    external: true

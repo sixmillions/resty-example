@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  redis6:
+    # restart: always
+    image: redis:6
+    container_name: redis
+    networks:  
+      - resty_resty_network
+    ports: 
+      - "6379:6379"
+    environment: 
+      TZ: Asia/Shanghai
+    privileged: true
+
+networks:  
+  resty_resty_network: # 默认网络名字
+    external: true

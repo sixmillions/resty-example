@@ -1,0 +1,22 @@
+version: '3'
+services:
+  minio:
+    #image: openresty/openresty:1.21.4.1-buster-fat
+    image: openresty/openresty:1.21.4.1-alpine-fat
+    container_name: resty
+    hostname: "resty"
+    networks:
+      - resty_network
+    environment:
+      TZ: Asia/Shanghai
+    privileged: true
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./html:/usr/local/openresty/nginx/html
+      - ./logs:/usr/local/openresty/nginx/logs
+      - ./lua:/usr/local/openresty/nginx/lua
+    ports:
+      - 8080:80
+
+networks:  
+  resty_network:
