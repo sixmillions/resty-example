@@ -1,7 +1,7 @@
 --
---openresty模块引用
---@author six
---@since 2023-03-04
+-- openresty模块引用
+-- @author six
+-- @since 2023-03-04
 --
 
 ngx.header["Content-Type"] = "text/html"

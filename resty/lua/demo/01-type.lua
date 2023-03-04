@@ -1,7 +1,7 @@
 --
---查看lua的数据类型
---@author six
---@since 2023-03-04
+-- 查看lua的数据类型
+-- @author six
+-- @since  2023-03-04
 --
 
 ngx.header["Content-Type"] = "text/html"

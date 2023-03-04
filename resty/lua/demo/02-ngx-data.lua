@@ -1,7 +1,7 @@
 --
---看一下ngx这个table中都存了什么
---@author six
---@since 2023-03-04
+-- 看一下ngx这个table中都存了什么
+-- @author six
+-- @since  2023-03-04
 --
 
 ngx.header["Content-Type"] = "text/html"
